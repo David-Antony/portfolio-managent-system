@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management System - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Portfolio Manager</div>
+        <ul class="nav-links" style="color: white;">
+            <li>Home</li>
+            <li>Portfolio Overview</li>
+            <li>Transactions</li>
+            <li>Reports</li>
+            <li>Profile</li>
+        </ul>
+    </nav>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal2">
+    <div class="modal-contents">
+        <h2>Sign Up</h2>
+        <h4 style="color: darkred;text-align: center;">Cant close without signing in</h4>
+        <form onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Function to open the modal
+    function openModal() {
+        document.getElementById("signupModal").style.display = "block";
+    }
+
+    // Function to handle form submission
+    function submitForm(event) {
+        event.preventDefault();
+        // Redirect to portfolio.html after form submission
+        window.location.href = "portfolio.html";
+    }
+
+
+    // Open the modal automatically when the page loads
+    window.onload = function() {
+        openModal();
+    };
+</script>
+
+</body>
+</html>

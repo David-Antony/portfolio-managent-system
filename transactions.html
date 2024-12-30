@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .transactions {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .transactions h1 {
+            text-align: center;
+            color: #34495e;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        form input {
+            width: 45%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #1abc9c;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #16a085;
+        }
+
+        .transaction-list {
+            margin-top: 20px;
+        }
+
+        .transaction-list table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .transaction-list table th, .transaction-list table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .transaction-list table th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .transaction-list table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .transaction-list table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Portfolio Manager</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            <li><a href="transactions.html" class="active">Transactions</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+    <section class="transactions">
+        <h1>Manage Your Transactions</h1>
+        <form id="transactionForm">
+            <input type="text" id="assetName" placeholder="Asset Name" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Transaction</button>
+        </form>
+        <div id="transactionList" class="transaction-list">
+            <h2>Recent Transactions</h2>
+            <!-- Transactions will appear here -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Portfolio Management System. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

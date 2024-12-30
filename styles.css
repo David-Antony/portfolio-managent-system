@@ -1,0 +1,238 @@
+/* Basic styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #34495e;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    border-bottom: 2px solid #1abc9c;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background-image: url("https://wallpaperset.com/w/full/0/d/1/105204.jpg");
+    background-size: cover; /* Ensure the image covers the full section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 80vh; /* Ensure the section has a height of 80% of the viewport height */
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text for better visibility */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text for better visibility */
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #2ecc71;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1; /* On top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Important for positioning the close button inside */
+}
+
+/* Updated Close button styles */
+.close-btn {
+    color: #333; /* Darker color for visibility */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px; /* Adjusted position */
+    right: 20px; /* Adjusted position */
+    cursor: pointer;
+    background-color: #f1f1f1; /* Light background for visibility */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: white;
+    background-color: #333; /* Darken on hover */
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.investment-breakdown ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.investment-breakdown li {
+    padding: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+/* Popup background overlay */
+.modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Popup content */
+.modal-contents {
+    background-color: #fff;
+    width: 400px;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Form styling */
+.modal-contents h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group input:focus {
+    border-color: #2ecc71;
+    outline: none;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+/*style code for transcation page*/
+
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+    

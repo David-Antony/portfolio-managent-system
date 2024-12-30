@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports/Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Portfolio Manager</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="reports.html" class="active">Reports</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section class="reports">
+        <h1>Performance Reports</h1>
+
+        <!-- Portfolio Performance Metrics Section -->
+        <section class="portfolio-performance">
+            <h2>Portfolio Performance</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>Total Portfolio Value</h3>
+                    <p>$250,000</p>
+                </div>
+                <div class="metric">
+                    <h3>Overall Growth</h3>
+                    <p>+12.5% this year</p>
+                </div>
+                <div class="metric">
+                    <h3>Top Performing Asset</h3>
+                    <p>Tech Stocks (+20%)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart Container for Portfolio Performance -->
+        <section class="chart-section">
+            <h2>Portfolio Growth Over Time</h2>
+            <div class="chart-container">
+                <!-- Chart.js interactive chart -->
+                <canvas id="portfolioChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Transaction Summary Table -->
+        <section class="transaction-summary">
+            <h2>Recent Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Asset</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-01</td>
+                        <td>Tech Stock</td>
+                        <td>Buy</td>
+                        <td>$5,000</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-05</td>
+                        <td>Real Estate</td>
+                        <td>Sell</td>
+                        <td>$10,000</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-15</td>
+                        <td>Bonds</td>
+                        <td>Buy</td>
+                        <td>$2,500</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Portfolio Management System. All Rights Reserved.</p>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Chart.js Configuration
+        const ctx = document.getElementById('portfolioChart').getContext('2d');
+        const portfolioChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October'],
+                datasets: [{
+                    label: 'Portfolio Growth',
+                    data: [100000, 105000, 110000, 115000, 120000, 125000, 130000, 135000, 140000, 150000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

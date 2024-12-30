@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Portfolio Manager</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Your Portfolio Management System</h1>
+        <p>Track your investments and optimize your portfolio for maximum growth.</p>
+        <button onclick="openPortfolioModal()">View Portfolio</button>
+        
+        <!-- Additional Content Container -->
+        <div class="extra-content">
+            <section class="features">
+                <h2>Features of Our Portfolio Management System</h2>
+                <ul class="feature-list">
+                    <li>🔍 <strong>Real-Time Analytics</strong> - Stay updated with real-time insights on your investments.</li>
+                    <li>📊 <strong>Comprehensive Reports</strong> - Generate detailed reports to track growth and performance.</li>
+                    <li>💼 <strong>Diverse Asset Tracking</strong> - Manage stocks, bonds, real estate, and more.</li>
+                    <li>🔒 <strong>Secure and Private</strong> - Your data is protected with top-notch security measures.</li>
+                </ul>
+            </section>
+
+            <section class="get-started">
+                <h2>Ready to Get Started?</h2>
+                <p>Start managing your portfolio efficiently and achieve your financial goals. Sign up today to begin your journey toward financial success.</p>
+                <button onclick="window.location.href='signup.html'">Sign Up Now</button>
+            </section>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-btn" onclick="closePortfolioModal()">&times;</span>
+            <h2>World's Portfolio Overview</h2>
+            <div class="modal-body">
+                <p><strong>Total Global Portfolio Value:</strong> $250 Trillion</p>
+                <p><strong>Global Overall Growth:</strong> +8.2% this year</p>
+                <p><strong>Top Performing Asset Sector:</strong> Technology (+15%)</p>
+                <div class="investment-breakdown">
+                    <h3>Global Asset Breakdown</h3>
+                    <ul>
+                        <li><strong>Stocks:</strong> $120 Trillion</li>
+                        <li><strong>Bonds:</strong> $60 Trillion</li>
+                        <li><strong>Real Estate:</strong> $40 Trillion</li>
+                        <li><strong>Cash & Cash Equivalents:</strong> $30 Trillion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Portfolio Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
